@@ -1,38 +1,184 @@
-.App {
+/* Reset de estilo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center; /* Centralizando o texto no corpo todo */
+}
+
+/* Estilo do header */
+header {
+  background: #0077cc;
+  color: white;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Estilo de navegação */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Espaço entre os botões */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Estilo dos botões */
+nav .nav-button {
+  background-color: #ffffff;
+  color: #0077cc;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav .nav-button:hover {
+  background-color: #0077cc;
+  color: white;
+  transform: scale(1.1); /* Aumenta ligeiramente o botão quando passa o mouse */
+}
+
+nav .nav-button:focus {
+  outline: none; /* Retira o contorno padrão */
+}
+
+
+/* Seção de About */
+#about {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace; /* Fonte disruptiva */
+  line-height: 1.8; /* Aumentando o espaçamento entre linhas */
+  color: #333;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  color: #0077cc;
+  margin-bottom: 2rem;
+}
+
+#about p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.8; /* Aumentando o espaçamento entre linhas */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify; /* Justificando o texto para uma leitura melhor */
+}
+
+/* Seção de Projetos */
+#projects {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+#projects ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+#projects li {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+  overflow: hidden;
+  text-align: left;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  height: 100%;
+}
+
+#projects li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Título do projeto */
+#projects h3 {
+  font-size: 1.5rem;
+  color: #0077cc;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Descrição do projeto */
+#projects p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Links */
+#projects a {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background-color: #0077cc;
   color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+#projects a:hover {
+  background-color: #005fa3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Link GitHub */
+#projects .github-link {
+  background-color: #333;
+}
+
+#projects .github-link:hover {
+  background-color: #555;
+}
+
+#projects span {
+  display: inline-block;
+  margin: 0 8px;
+  color: #333;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  #projects h2 {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  #projects ul {
+    grid-template-columns: 1fr; /* Um card por linha em telas menores */
+  }
+
+  #projects li {
+    padding: 1rem;
   }
 }
