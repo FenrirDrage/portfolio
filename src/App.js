@@ -6,8 +6,11 @@ import Contact from "./components/Contact";
 import "./App.css";
 
 function App() {
+  useEffect(() => {
+    document.title = "Meu Portfólio";
+  }, []);
   return (
-    <div>
+    <div className="App">
       <Header />
       <About />
       <Projects />

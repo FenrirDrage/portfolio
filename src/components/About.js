@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <section id="about">
+    <section id="about" className="about-section">
       <h2>Sobre Mim</h2>
       <p>
         Olá! Sou Sérgio Alves, um desenvolvedor web apaixonado por criar

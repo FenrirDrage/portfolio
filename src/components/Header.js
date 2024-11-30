@@ -1,29 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import "./Header.css";
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <header>
-      <h1>Meu Portfólio</h1>
-      <nav>
-        <button
-          className="nav-button"
-          onClick={() => (window.location.hash = "#about")}
-        >
-          Sobre
+    <header className="header">
+      <div className="header-container">
+        <h1 className="logo">Meu Portfólio</h1>
+        <button className="burger-btn" onClick={toggleMenu}>
+          ☰
         </button>
-        <button
-          className="nav-button"
-          onClick={() => (window.location.hash = "#projects")}
-        >
-          Projetos
-        </button>
-        <button
-          className="nav-button"
-          onClick={() => (window.location.hash = "#contact")}
-        >
-          Contacto
-        </button>
-      </nav>
+        <nav className={`menu ${isMenuOpen ? "open" : ""}`}>
+          <button className="ios-button">Início</button>
+          <button className="ios-button">Sobre</button>
+          <button className="ios-button">Projetos</button>
+          <button className="ios-button">Contacto</button>
+        </nav>
+      </div>
     </header>
   );
 }

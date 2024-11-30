@@ -12,7 +12,8 @@ function Projects() {
     {
       title: "Aplicação de Fisioterapia",
       description: "Plataforma para marcações e apresentações de serviços.",
-      projectLink: "#",
+      projectLink: "https://github.com/FenrirDrage/fisio-webapp",
+      ghLink: "#",
     },
     {
       title: "Eventos Artísticos",

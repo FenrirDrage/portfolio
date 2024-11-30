@@ -1,0 +1,88 @@
+/* Geral do Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .header-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Botões estilo iOS */
+  .ios-button {
+    background-color: #007aff; /* Azul típico do iOS */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .ios-button:hover {
+    background-color: #005bb5;
+    transform: translateY(-2px);
+  }
+  
+  .ios-button:active {
+    transform: translateY(0px);
+  }
+  
+  /* Menu Burger */
+  .burger-btn {
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Só aparece em telas pequenas */
+  }
+  
+  .menu {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .menu.open {
+    display: flex;
+    flex-direction: column; /* Menu empilhado em ecrãs pequenos */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 20px 10px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+  
+    .burger-btn {
+      display: block;
+    }
+  
+    .menu.open {
+      display: flex;
+    }
+  }
+  
